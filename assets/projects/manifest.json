@@ -1,0 +1,10 @@
+{
+  "_comment": "Order of the project cards in the Projects window. To add a project: drop a new .md file in this folder and add its filename to this list.",
+  "projects": [
+    "letex.md",
+    "repoduce-me.md",
+    "oml.md",
+    "pyfi.md",
+    "recime.md"
+  ]
+}

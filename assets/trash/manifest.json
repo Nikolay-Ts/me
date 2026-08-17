@@ -1,0 +1,6 @@
+{
+  "_comment": "Everything in the Recycle Bin. To add an image: drop the file in assets/trash/ and add an entry below. An entry can be a plain filename string, or an object with a caption. No code changes needed.",
+  "items": [
+    { "src": "placeholder.svg", "caption": "Placeholder" }
+  ]
+}

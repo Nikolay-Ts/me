@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240">
+  <rect width="320" height="240" fill="#e8e6db"/>
+  <rect x="8" y="8" width="304" height="224" fill="none" stroke="#a9a49020" stroke-width="2" stroke-dasharray="8 6"/>
+  <g transform="translate(160 100)" fill="none" stroke="#9a9583" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-38 -22 h76 l-7 74 a8 8 0 0 1 -8 7 h-46 a8 8 0 0 1 -8 -7 z"/>
+    <path d="M-48 -22 h96"/>
+    <path d="M-14 -22 v-10 a6 6 0 0 1 6 -6 h16 a6 6 0 0 1 6 6 v10"/>
+    <path d="M-14 -2 v40 M0 -2 v40 M14 -2 v40"/>
+  </g>
+  <text x="160" y="200" text-anchor="middle" font-family="Tahoma, Verdana, sans-serif"
+        font-size="15" fill="#7c7767">Placeholder</text>
+</svg>
