@@ -8,7 +8,9 @@ specialisation in parallel and distributed systems at the
 main goal is to contribute postiviely and meaningfully to the 
 research field of distributed systems. 
 I am also intersted in HPC simulation software and HPC for 
-bio-informatics.
+bio-informatics. 
+
+My main goal with this degree would be to find a more specific area of research to focus on and hopefully extend my studies at the IPP to a full PhD program, but only time will tell...
 
 
 ![Ipp-logo.png](./logos/Ipp-logo.png) !NOTE: Put this on the right and the other text on the LEFT.

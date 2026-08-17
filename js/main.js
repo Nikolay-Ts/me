@@ -86,6 +86,15 @@ function wireGlobalEvents() {
     }
   });
 
+  /* Any link to a PDF opens in its own window on the desktop rather than
+     navigating the page away. Links that opt out keep the normal behaviour. */
+  layer.addEventListener("click", function (e) {
+    const link = e.target.closest('a[href$=".pdf"]');
+    if (!link || link.hasAttribute("download") || link.dataset.external === "true") return;
+    e.preventDefault();
+    openPdfWindow(link.getAttribute("href"), pdfTitleFor(link));
+  });
+
   /* Recycle Bin behaves like Explorer: click selects, double-click opens the
      image in its own window. */
   layer.addEventListener("click", function (e) {
@@ -180,6 +189,36 @@ function selectIcon(icon) {
 function deselectIcons() {
   document.querySelectorAll(".desktop-icon.selected").forEach(function (i) {
     i.classList.remove("selected");
+  });
+}
+
+/* Prefer an explicit title, then the link's own text, then the filename. */
+function pdfTitleFor(link) {
+  const explicit = link.dataset.pdfTitle;
+  if (explicit) return explicit;
+
+  const text = link.textContent.trim();
+  if (text && text.length <= 40 && !/^https?:/i.test(text)) return text;
+
+  return decodeURIComponent(link.getAttribute("href").split("/").pop());
+}
+
+function openPdfWindow(url, title) {
+  XPWindows.openDynamic({
+    id: "pdf:" + url,
+    title: title,
+    width: 720,
+    height: 640,
+    icon: APPS.cv.icon,
+    content:
+      '<div class="pdf-root">' +
+        '<iframe class="pdf-frame" src="' + url + '" title="' + title + '"></iframe>' +
+        '<div class="pdf-bar">' +
+          '<a class="xp-button" href="' + url + '" download>Download</a>' +
+          '<a class="xp-button" href="' + url + '" target="_blank" rel="noopener" ' +
+            'data-external="true">Open in browser</a>' +
+        "</div>" +
+      "</div>"
   });
 }
 

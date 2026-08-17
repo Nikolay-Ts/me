@@ -86,6 +86,10 @@ const APPS = {
             My main goal is to contribute positively and meaningfully to the
             research field of distributed systems. I am also interested in
             HPC simulation software and HPC for bio-informatics.</p>
+
+            <p>My main goal with this degree would be to find a more specific
+            area of research to focus on, and hopefully extend my studies at
+            the IPP to a full PhD program &mdash; but only time will tell&hellip;</p>
           </div>
           <div class="edu-logo-plate edu-plate-square">
             <img src="assets/education/logos/Ipp-logo.png" alt="Institut Polytechnique de Paris logo">
@@ -128,8 +132,8 @@ const APPS = {
 
   experience: {
     title: "Experience",
-    width: 440,
-    height: 300,
+    width: 640,
+    height: 600,
     icon: `<svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
       <rect width="40" height="40" rx="8" fill="#f2903f"/>
       <rect x="8" y="17" width="24" height="14" rx="2" fill="#fff"/>
@@ -137,8 +141,81 @@ const APPS = {
       <line x1="8" y1="23" x2="32" y2="23" stroke="#f2903f" stroke-width="2"/>
     </svg>`,
     content: `
-      <div class="content-placeholder">
-        <p>Coming soon &mdash; check back later!</p>
+      <div class="content-prose">
+        <h3>Academia</h3>
+
+        <h4>MEVIS</h4>
+        <p>I wrote my bachelor thesis in collaboration with
+        <a href="https://www.mevis.fraunhofer.de/" target="_blank" rel="noopener">MEVIS Fraunhofer</a>,
+        where I researched how to use mechanistic interpretability (a subfield
+        of explainable AI) to see if a multimodal medical transformer has
+        retained some "world knowledge" from its pretraining data. A lot of
+        this research was inspired by Anthropic's MI research on LLMs. The
+        drive of this thesis was the lack of research done on medical vision
+        transformers &mdash; at the time only one publication existed, and only
+        for vision transformers.</p>
+
+        <p>There I, alongside another student, used sparse auto-encoders (SAE)
+        to obtain the most important features (a.k.a. latents) of the medical
+        transformer, and see if those latents had some representation of real
+        world concepts such as "breast", "cancer", "malesion" and so on.</p>
+
+        <figure class="content-figure diagram-figure">
+          <object class="diagram-pdf" data="assets/experience/tickz_standalone.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=Fit"
+                  type="application/pdf"
+                  aria-label="Diagram of the Matryoshka sparse auto-encoder attached to a frozen UMedPT backbone">
+            <img src="assets/experience/sae-diagram.png"
+                 alt="Diagram of the Matryoshka sparse auto-encoder attached to a frozen UMedPT backbone">
+          </object>
+          <figcaption>A simple diagram explaining how the SAE extracts the most
+          meaningful activations from the transformer &mdash;
+          <a href="assets/experience/tickz_standalone.pdf"
+             data-pdf-title="SAE diagram">open it full size</a>.</figcaption>
+        </figure>
+
+        <p>If you are interested, the full thesis is
+        <a href="assets/experience/Medical-depL-models-do-learn-about-the-world.pdf"
+           data-pdf-title="Bachelor thesis">attached here</a>.</p>
+
+        <h4>Teaching Assistant</h4>
+        <p>I have been a teaching assistant for six classes: programming in
+        C/C++; operating systems; software engineering; databases; automata,
+        computability and complexity theory; and algorithms and data
+        structures. I think the best part about it is having conversations
+        with students that are also passionate about the subjects. Another
+        benefit was the one-on-one time with professors, which provided me
+        with a lot of help that would be harder to get otherwise.</p>
+
+        <p>Having to teach a subject in tutorials also helped me a lot, as it
+        forced me to learn and go much deeper into the topics so that I could
+        be ready for potential questions, or to explain the reasoning behind
+        the concepts.</p>
+
+        <h3>Industry</h3>
+
+        <h4>German Aerospace Center (DLR)</h4>
+        <div class="edu-row">
+          <div class="edu-text">
+            <p>At the DLR (during my internship) I began by rewriting the local
+            satellite messaging system from C to C++17. This was challenging as
+            the original system was blocking and had no multi-threading
+            support. I met this challenge by mainly relying on RabbitMQ and the
+            Bloomberg standard libraries &mdash; the former providing easy
+            communication via queues, the latter thread pools and automatic
+            thread management.</p>
+
+            <p>Towards the end of my internship and into my work study, I spent
+            the next year primarily focused on working with the
+            <strong>Galileo Kopierzentrum</strong>, improving the internal
+            software that monitored and reported the status of the Galileo and
+            other satellites.</p>
+          </div>
+
+
+          <figure class="edu-logo-plate edu-plate-wide">
+            <img src="assets/experience/DLR.jpg" alt="Lasagna">
+          </figure>
+        </div>
       </div>
     `,
   },
