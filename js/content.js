@@ -303,6 +303,34 @@ const APPS = {
    Both read a manifest + files from assets/, so adding content is a data change,
    not a code change. */
 
+/* Manifests are hand-edited, so a stray comma is the likeliest failure by far.
+   Report it against the actual file and line rather than leaking a bare
+   "unexpected character" from the JSON parser. */
+async function loadManifest(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Could not fetch " + url + " (HTTP " + res.status + ")");
+
+  const text = await res.text();
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    const position = /position (\d+)/.exec(err.message);
+    let where = "";
+    if (position) {
+      const upto = text.slice(0, Number(position[1]));
+      const line = upto.split("\n").length;
+      where = " near line " + line;
+    } else {
+      const lineCol = /line (\d+) column (\d+)/.exec(err.message);
+      if (lineCol) where = " near line " + lineCol[1];
+    }
+    throw new Error(
+      url + " is not valid JSON" + where +
+      ". The usual cause is a comma after the last item in the list."
+    );
+  }
+}
+
 /* Wraps images that sit alone in a paragraph into a scrollable figure row,
    using their alt text as the caption. Lets the .md files stay plain markdown. */
 function groupImageRows(container) {
