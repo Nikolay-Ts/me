@@ -79,37 +79,35 @@ const APPS = {
       <div class="content-prose">
         <h3>Masters</h3>
         <div class="edu-row">
-          <div class="edu-text">
-            <p>Currently, I am pursuing a master in informatics with a
-            specialisation in parallel and distributed systems at the
-            <a href="https://www.ip-paris.fr/" target="_blank" rel="noopener">Institut Polytechnique de Paris</a>.
-            My main goal is to contribute positively and meaningfully to the
-            research field of distributed systems. I am also interested in
-            HPC simulation software and HPC for bio-informatics.</p>
-
-            <p>My main goal with this degree would be to find a more specific
-            area of research to focus on, and hopefully extend my studies at
-            the IPP to a full PhD program &mdash; but only time will tell&hellip;</p>
-          </div>
           <div class="edu-logo-plate edu-plate-square">
             <img src="assets/education/logos/Ipp-logo.png" alt="Institut Polytechnique de Paris logo">
           </div>
+
+          <p>Currently, I am pursuing a master in informatics with a
+          specialisation in parallel and distributed systems at the
+          <a href="https://www.ip-paris.fr/" target="_blank" rel="noopener">Institut Polytechnique de Paris</a>.
+          My main goal is to contribute positively and meaningfully to the
+          research field of distributed systems. I am also interested in
+          HPC simulation software and HPC for bio-informatics.</p>
+
+          <p>My main goal with this degree would be to find a more specific
+          area of research to focus on, and hopefully extend my studies at
+          the IPP to a full PhD program &mdash; but only time will tell&hellip;</p>
         </div>
 
         <h3>Bachelors</h3>
         <div class="edu-row">
-          <div class="edu-text">
-            <p>I finished my bachelor's degree at Constructor University
-            Bremen (formerly known as Jacobs University) with a BSc in
-            informatics. The campus and the people there were wonderful and
-            the university is ever growing. There is where I became
-            passionate about distributed systems and because of the
-            professors and their high quality teaching and help, was I able
-            to get in the IPP. To them I will always be thankful.</p>
-          </div>
           <div class="edu-logo-plate edu-plate-wide">
             <img src="assets/education/logos/Cu-logo.jpg" alt="Constructor University Bremen logo">
           </div>
+
+          <p>I finished my bachelor's degree at Constructor University
+          Bremen (formerly known as Jacobs University) with a BSc in
+          informatics. The campus and the people there were wonderful and
+          the university is ever growing. There is where I became
+          passionate about distributed systems and because of the
+          professors and their high quality teaching and help, was I able
+          to get in the IPP. To them I will always be thankful.</p>
         </div>
 
         <h3>High school</h3>
@@ -195,26 +193,23 @@ const APPS = {
 
         <h4>German Aerospace Center (DLR)</h4>
         <div class="edu-row">
-          <div class="edu-text">
-            <p>At the DLR (during my internship) I began by rewriting the local
-            satellite messaging system from C to C++17. This was challenging as
-            the original system was blocking and had no multi-threading
-            support. I met this challenge by mainly relying on RabbitMQ and the
-            Bloomberg standard libraries &mdash; the former providing easy
-            communication via queues, the latter thread pools and automatic
-            thread management.</p>
-
-            <p>Towards the end of my internship and into my work study, I spent
-            the next year primarily focused on working with the
-            <strong>Galileo Kopierzentrum</strong>, improving the internal
-            software that monitored and reported the status of the Galileo and
-            other satellites.</p>
-          </div>
-
-
           <figure class="edu-logo-plate edu-plate-wide">
-            <img src="assets/experience/DLR.jpg" alt="Lasagna">
+            <img src="assets/experience/DLR.jpg" alt="German Aerospace Center (DLR) logo">
           </figure>
+
+          <p>At the DLR (during my internship) I began by rewriting the local
+          satellite messaging system from C to C++17. This was challenging as
+          the original system was blocking and had no multi-threading
+          support. I met this challenge by mainly relying on RabbitMQ and the
+          Bloomberg standard libraries &mdash; the former providing easy
+          communication via queues, the latter thread pools and automatic
+          thread management.</p>
+
+          <p>Towards the end of my internship and into my work study, I spent
+          the next year primarily focused on working with the
+          <strong>Galileo Kopierzentrum</strong>, improving the internal
+          software that monitored and reported the status of the Galileo and
+          other satellites.</p>
         </div>
       </div>
     `,
