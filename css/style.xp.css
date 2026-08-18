@@ -283,6 +283,22 @@ button {
     border: 1px solid #a9a9a9;
 }
 
+/* Portrait clip, so cap the height rather than the width or it dominates
+   the window. */
+.video-figure video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 420px;
+    background: #000;
+    border: 1px solid #a9a9a9;
+    border-radius: 3px;
+}
+
+.video-figure figcaption {
+    text-align: center;
+}
+
 .content-figure figcaption {
     font-size: 11.5px;
     color: #444;

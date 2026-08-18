@@ -20,7 +20,7 @@ const APPS = {
         and, if you want, contact me directly.</p>
 
         <figure class="content-figure">
-          <img src="assets/fall-back.jpg" alt="Photo of Nik bouldering">
+          <img src="assets/about-me/boulder.webp" alt="Photo of Nik bouldering">
           <figcaption>Picture of me bouldering</figcaption>
         </figure>
 
@@ -52,8 +52,13 @@ const APPS = {
         to use the kilter board but am very bad at it. Because bouldering on
         video does not seem very cool, here is a video of my most proud
         dyno!</p>
-        <figure class="content-figure">
-          <img src="assets/fall-back.jpg" alt="Dyno video placeholder">
+        <figure class="content-figure video-figure">
+          <video controls playsinline preload="metadata">
+            <source src="assets/trash/big-dyno.mp4" type="video/mp4">
+            <p>Your browser can&rsquo;t play this video &mdash;
+            <a href="assets/trash/big-dyno.mp4" download>download it</a> instead.</p>
+          </video>
+          <figcaption>My proudest dyno</figcaption>
         </figure>
 
         <h4>Software Development</h4>
